@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300;400&display=swap");
+
+html {
+  background-color: #edeef5;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+
+  line-height: 1.6em;
+}
+
+p {
+  /* font-family: "Raleway", sans-serif; */
+}
