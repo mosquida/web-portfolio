@@ -2,7 +2,30 @@ function App() {
   return (
     <div className="px-5 md:px-14 lg:px-32">
       {/* nav */}
-      <nav></nav>
+      <nav className="px-5 md:px-10 fixed top-0 left-0 w-full bg-opacity-10 p-4 backdrop-blur-lg">
+        <div className="flex justify-between">
+          <div>
+            <p>@cjmosquida</p>
+          </div>
+          <div>
+            <ul className=" text-sm flex gap-10 justify-end">
+              <li>
+                <a href="">Case Studies</a>
+              </li>
+              <li>
+                <a href="">Xperience</a>
+              </li>
+              <li>
+                <a href="">Education</a>
+              </li>
+              <li>
+                <a href="">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
       {/* Main */}
       <div className="sm:h-screen flex items-center justify-center ">
         <div className=" text-center">
