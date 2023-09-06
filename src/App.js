@@ -1,3 +1,5 @@
+import projects from "./projectsData";
+
 function App() {
   return (
     <div className="px-5 md:px-14 lg:px-32">
@@ -10,7 +12,7 @@ function App() {
           <div>
             <ul className=" text-sm flex gap-10 justify-end">
               <li>
-                <a href="">Case Studies</a>
+                <a href="#cases">Case Studies</a>
               </li>
               <li>
                 <a href="">Xperience</a>
@@ -19,7 +21,7 @@ function App() {
                 <a href="">Education</a>
               </li>
               <li>
-                <a href="">Contact</a>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -63,12 +65,12 @@ function App() {
         </div>
       </div>
       {/* use case */}
-      <div>
-        <p className="text-2xl font-medium pb-16">Latest Case Studies</p>
+      <div id="cases">
+        <p className="text-2xl font-medium pb-12">Case Studies and Projects</p>
 
-        <div className="md:grid grid-cols-2 gap-10">
+        <div className="md:grid grid-cols-2 gap-28">
           {/* 1st */}
-          <div>
+          {/* <div>
             <p className="text-xs font-light pt-20">
               API Integration Development
             </p>
@@ -88,16 +90,45 @@ function App() {
           </div>
           <div>
             <img src="/sample.png" className="h-4/5" alt="" />
-          </div>
+          </div> */}
 
           {/* 2nd */}
           {/* <div className="pt-20">asa</div>
           <div>zd</div> */}
+
+          {projects.map((item) => (
+            <>
+              <div className="pt-10">
+                <div className="flex gap-5 items-center">
+                  <div dangerouslySetInnerHTML={{ __html: item.icon }}></div>
+                  <div>
+                    <p className="text-xs font-light">
+                      API Integration Development
+                    </p>
+                    <p className=" text-2xl font-medium">{item.title}</p>
+                  </div>
+                </div>
+                <p className="text-sm pt-4 pb-10">{item.description}</p>
+
+                <a
+                  href="#"
+                  className="text-xs border-gray-600 border px-6 py-4 rounded-full
+               hover:bg-blue-500 hover:border-blue-500 transition duration-300 ease-in-out
+               "
+                >
+                  View Case Study
+                </a>
+              </div>
+              {/* <div>
+                <img src="/sample.png" className="h-4/5" alt="" />
+              </div> */}
+            </>
+          ))}
         </div>
       </div>
 
       {/* Contacts */}
-      <div className="pb-20 pt-40">
+      <div id="contact" className="pb-20 pt-40">
         <p className="text-2xl font-medium pb-10">Get in Touch</p>
 
         <div className="md:grid grid-cols-2">
